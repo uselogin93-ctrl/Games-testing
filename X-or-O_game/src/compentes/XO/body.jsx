@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState,useEffect,useRef } from 'react'
-import '../App.css'
 
 const Body = () => {
   const [boxvalue, setboxvalue] = useState("X");
