@@ -9,7 +9,7 @@ const Mainbody = () => {
           <p className="w-[70%] flex justify-center items-center">The new gaming platform for all your entertainment needs.</p>
         </div>
         <div className="w-[99%] h-full flex justify-center items-center relative">
-          <Image src="/vector.jpg" alt="URL Shortener" fill={true} className="mix-blend-darken" />
+          <img src="/vector.jpg" alt="URL Shortener" fill={true} className="mix-blend-darken" />
         </div>
       </section>
     </div>
