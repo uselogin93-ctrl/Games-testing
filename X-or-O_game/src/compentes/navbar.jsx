@@ -16,7 +16,7 @@ const Navbar = () => {
             <NavLink to="/" className={(e) => { return e.isActive ? "text-indigo-700 font-bold text-[18px] transition-all duration-200" : "text-[#565D6DFF] transition-all duration-200 hover:text-indigo-600" }}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/games" className={(e) => { return e.isActive ? "text-indigo-700 font-bold text-[18px] transition-all duration-200" : "text-[#565D6DFF] transition-all duration-200 hover:text-indigo-600" }}>Games</NavLink>
+            <NavLink to="/game" className={(e) => { return e.isActive ? "text-indigo-700 font-bold text-[18px] transition-all duration-200" : "text-[#565D6DFF] transition-all duration-200 hover:text-indigo-600" }}>Games</NavLink>
           </li>
           <li>
             <NavLink to="/about" className={(e) => { return e.isActive ? "text-indigo-700 font-bold text-[18px] transition-all duration-200" : "text-[#565D6DFF] transition-all duration-200 hover:text-indigo-600" }}>About</NavLink>
