@@ -2,13 +2,13 @@ import React from 'react'
 import { useState,useEffect,useRef } from 'react'
 
 const Body = () => {
-  const [boxvalue, setboxvalue] = useState("X")
-  const box1 = useRef(null)
-  const box2 = useRef(null)
-  const box3 = useRef(null)
-  const box4 = useRef(null)
-  const box5 = useRef(null)
-  const box6 = useRef(null)
+  const [boxvalue, setboxvalue] = useState("X");
+  const box1 = useRef();
+  const box2 = useRef();
+  const box3 = useRef();
+  const box4 = useRef();
+  const box5 = useRef();
+  const box6 = useRef();
 
   const handleboxclick = (e) => {
     let x="X"
