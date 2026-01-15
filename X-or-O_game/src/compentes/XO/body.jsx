@@ -15,12 +15,12 @@ const Body = () => {
     let o="O"
     if(!boxvalue===x){
       setboxvalue(o)
-      e.current.style.color="White"
-      e.current.style.backgroundColor="Black"
+      // e.current.style.color="White"
+      // e.current.style.backgroundColor="Black"
     }else{
       setboxvalue(x)
-      e.current.style.color="White"
-      e.current.style.backgroundColor="Black"
+      // e.current.style.color="White"
+      // e.current.style.backgroundColor="Black"
     }
   }
   return (

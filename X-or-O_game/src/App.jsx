@@ -12,19 +12,19 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900'><Navbar /><Mainbody /><Footer /></div>
+      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900 flex justify-start items-center'><Navbar /><Mainbody /><Footer /></div>
     },
     {
       path:"/about",
-      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900'><Navbar /><About /><Footer /></div>
+      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900 flex justify-start items-center'><Navbar /><About /><Footer /></div>
     },
     {
       path:"/game",
-      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900'><Navbar /><Game /><Footer /></div>
+      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900 flex justify-start items-center'><Navbar /><Game /><Footer /></div>
     },
     {
       path:"/xo",
-      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900'><Navbar /><Body /><Footer /></div>
+      element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900 flex justify-start items-center'><Navbar /><Body /><Footer /></div>
     }
   ])
 
