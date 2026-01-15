@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState,useEffect,useRef } from 'react'
+import '../App.css'
 
 const Body = () => {
   const [boxvalue, setboxvalue] = useState("X");
@@ -11,14 +12,16 @@ const Body = () => {
   const box6 = useRef();
 
   const handleboxclick = (e) => {
-    let x="X"
-    let o="O"
+    let x="/X.png"
+    let o="/O.png"
     if(!boxvalue===x){
-      setboxvalue(o)
+      e.src=o
+      setboxvalue(x)
       // e.current.style.color="White"
       // e.current.style.backgroundColor="Black"
     }else{
-      setboxvalue(x)
+      e.src=x
+      setboxvalue(o)
       // e.current.style.color="White"
       // e.current.style.backgroundColor="Black"
     }
@@ -27,22 +30,22 @@ const Body = () => {
     <div className='w-[99%] h-[99%] flex justify-center items-center bg-transparent p-2.5'>
         <div className='w-[80%] h-[70%] grid grid-cols-3 justify-center items-center bg-indigo-200 ring-2 ring-indigo-700 rounded-lg shadow-2xs shadow-indigo-700'>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <input type="text" name="box1" value={boxvalue} ref={box1} className='text-xl font-bold' onClick={handleboxclick(box1)}/>
+                <img src="" value={boxvalue(box1)} ref={box1} className='w-full h-full'/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <input type="text" name="box2" value={boxvalue} ref={box2} className='text-xl font-bold' onClick={handleboxclick(box2)}/>
+                <img src="" value={boxvalue(box2)} ref={box2} className='w-full h-full'/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <input type="text" name="box3" value={boxvalue} ref={box3} className='text-xl font-bold' onClick={handleboxclick(box3)}/>
+                <img src="" value={boxvalue(box3)} ref={box3} className='w-full h-full'/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <input type="text" name="box4" value={boxvalue} ref={box4} className='text-xl font-bold' onClick={handleboxclick(box4)}/>
+                <img src="" value={boxvalue(box4)} ref={box4} className='w-full h-full'/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <input type="text" name="box5" value={boxvalue} ref={box5} className='text-xl font-bold' onClick={handleboxclick(box5)}/>
+                <img src="" value={boxvalue(box5)} ref={box5} className='w-full h-full'/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <input type="text" name="box6" value={boxvalue} ref={box6} className='text-xl font-bold' onClick={handleboxclick(box6)}/>
+                <img src="" value={boxvalue(box6)} ref={box6} className='w-full h-full'/>
             </div>
         </div>
     </div>
