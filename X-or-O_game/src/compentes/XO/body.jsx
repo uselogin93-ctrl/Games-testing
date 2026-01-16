@@ -21,7 +21,6 @@ const Body = () => {
             e.src = o
             e.value="O"
             setboxvalue(o)
-            
         } else {
             e.src = x
             e.value="X"
