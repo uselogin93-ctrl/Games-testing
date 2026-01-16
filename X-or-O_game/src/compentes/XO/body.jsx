@@ -29,22 +29,22 @@ const Body = () => {
     <div className='w-[99%] h-[99%] flex justify-center items-center bg-transparent p-2.5'>
         <div className='w-[80%] h-[70%] grid grid-cols-3 justify-center items-center bg-indigo-200 ring-2 ring-indigo-700 rounded-lg shadow-2xs shadow-indigo-700'>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <img src="" value={boxvalue(box1)} ref={box1} className='w-full h-full'/>
+                <img src="" value={boxvalue} ref={box1} className='w-full h-full' onClick={handleboxclick(box1)}/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <img src="" value={boxvalue(box2)} ref={box2} className='w-full h-full'/>
+                <img src="" value={boxvalue} ref={box2} className='w-full h-full' onClick={handleboxclick(box2)}/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <img src="" value={boxvalue(box3)} ref={box3} className='w-full h-full'/>
+                <img src="" value={boxvalue} ref={box3} className='w-full h-full' onClick={handleboxclick(box3)}/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <img src="" value={boxvalue(box4)} ref={box4} className='w-full h-full'/>
+                <img src="" value={boxvalue} ref={box4} className='w-full h-full' onClick={handleboxclick(box4)}/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <img src="" value={boxvalue(box5)} ref={box5} className='w-full h-full'/>
+                <img src="" value={boxvalue} ref={box5} className='w-full h-full' onClick={handleboxclick(box5)}/>
             </div>
             <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                <img src="" value={boxvalue(box6)} ref={box6} className='w-full h-full'/>
+                <img src="" value={boxvalue} ref={box6} className='w-full h-full' onClick={handleboxclick(box6)}/>
             </div>
         </div>
     </div>
