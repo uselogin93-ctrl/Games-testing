@@ -10,6 +10,10 @@ const Body = () => {
     const [box_4, setbox_4] = useState("");
     const [box_5, setbox_5] = useState("");
     const [box_6, setbox_6] = useState("");
+    const [box_7, setbox_7] = useState("");
+    const [box_8, setbox_8] = useState("");
+    const [box_9, setbox_9] = useState("");
+
 
     const box1 = useRef();
     const box2 = useRef();
@@ -17,6 +21,9 @@ const Body = () => {
     const box4 = useRef();
     const box5 = useRef();
     const box6 = useRef();
+    const box7 = useRef();
+    const box8 = useRef();
+    const box9 = useRef();
 
     const handleboxclick = (e) => {
         let x = "/X.png"
@@ -53,6 +60,15 @@ const Body = () => {
                 </div>
                 <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
                     <img src="" value={box_6} ref={box6} className='w-25 h-50' onClick={() => { handleboxclick(box6.current) }} />
+                </div>
+                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
+                    <img src="" value={box_7} ref={box7} className='w-25 h-50' onClick={() => { handleboxclick(box7.current) }} />
+                </div>
+                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
+                    <img src="" value={box_8} ref={box8} className='w-25 h-50' onClick={() => { handleboxclick(box8.current) }} />
+                </div>
+                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
+                    <img src="" value={box_9} ref={box9} className='w-25 h-50' onClick={() => { handleboxclick(box9.current) }} />
                 </div>
             </div>
         </div>
