@@ -35,7 +35,7 @@ const Body = () => {
     }
     return (
         <div className='w-[99%] h-[99%] flex justify-center items-center bg-transparent p-2.5'>
-            <div className='w-[80%] h-[70%] grid grid-cols-3 justify-center items-center bg-indigo-200 ring-2 ring-indigo-700 rounded-lg shadow-2xs shadow-indigo-700'>
+            <div className='w-[80%] h-[70%] grid grid-cols-3 grid-rows-3 justify-center items-center bg-indigo-200 ring-2 ring-indigo-700 rounded-lg shadow-2xs shadow-indigo-700'>
                 <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
                     <img src="" value={box_1} ref={box1} className='w-25 h-50' onClick={() => { handleboxclick(box1.current) }} />
                 </div>
