@@ -17,19 +17,19 @@ const Body = () => {
     const box9 = useRef();
 
     const handleboxclick = (e) => {
-        if (boxvalue === x) {
+        if (boxvalue === "x") {
             e.src = o
             e.value = "o"
-            setboxvalue(o)
+            setboxvalue("o")
         } else {
             e.src = x
             e.value = "x"
-            setboxvalue(x)
+            setboxvalue("x")
         }
     }
 
     useEffect(async () => {
-        let v1 = await box1.currentvalue
+        let v1 = await box1.current.value
         let v2 = await box2.current.value
         let v3 = await box3.current.value
         let v4 = await box4.current.value
