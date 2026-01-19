@@ -15,7 +15,7 @@ const Navbar = () => {
 
       <div className='hidden md:block'>
         <ul className='flex items-center gap-8'>
-          {['Home', 'Games', 'About'].map((item) => (
+          {['Home', 'Game', 'About'].map((item) => (
             <li key={item}>
               <NavLink
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}

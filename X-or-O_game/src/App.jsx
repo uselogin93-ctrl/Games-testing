@@ -19,7 +19,7 @@ function App() {
       element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900 justify-center items-center p-2.5'><Navbar /><About /><Footer /></div>
     },
     {
-      path:"/games",
+      path:"/game",
       element:<div className='w-screen h-screen bg-indigo-400 text-indigo-900 justify-center items-center p-2.5'><Navbar /><Game /><Footer /></div>
     },
     {
