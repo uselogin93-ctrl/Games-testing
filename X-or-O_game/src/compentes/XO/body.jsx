@@ -38,18 +38,18 @@ const Body = () => {
         let v7 = await box7.current.value
         let v8 = await box8.current.value
         let v9 = await box9.current.value
-        if (v1 == o && v2 == o && v3 == o && v4 == o && v5 == o && v6 == o && v7 == o && v8 == o && v9 == o ) {
-            if (v1 == o && v2 == o && v3 == o) {
+        if (v1 == "o" && v2 == "o" && v3 == "o" && v4 == "o" && v5 == "o" && v6 == "o" && v7 == "o" && v8 == "o" && v9 == "o") {
+            if (v1 == "o" && v2 == "o" && v3 == "o") {
                 alert("o is the win")
-            } else if (v4 == o && v5 == o && v6 == o) {
+            } else if (v4 == "o" && v5 == "o" && v6 == "o") {
                alert("o is the win")
             } else {
                 alert("o is the win")
             }
         } else {
-            if (v1 == x && v2 == x && v3 == x) {
+            if (v1 == "x" && v2 == "x" && v3 == "x") {
                 alert("x is the win")
-            } else if (v4 == x && v5 == x && v6 == x) {
+            } else if (v4 == "x" && v5 == "x" && v6 == "x") {
                alert("x is the win")
             } else {
                 alert("x is the win")
