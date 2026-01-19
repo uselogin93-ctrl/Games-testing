@@ -19,11 +19,11 @@ const Body = () => {
     const handleboxclick = (e) => {
         if (boxvalue === x) {
             e.src = o
-            e.value = "O"
+            e.value = "o"
             setboxvalue(o)
         } else {
             e.src = x
-            e.value = "X"
+            e.value = "x"
             setboxvalue(x)
         }
     }
