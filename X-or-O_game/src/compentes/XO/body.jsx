@@ -40,19 +40,19 @@ const Body = () => {
         let v9 = await box9.current.value
         if (v1 == o && v2 == o && v3 == o && v4 == o && v5 == o && v6 == o && v7 == o && v8 == o && v9 == o ) {
             if (v1 == o && v2 == o && v3 == o) {
-                alert("O is the win")
+                alert("o is the win")
             } else if (v4 == o && v5 == o && v6 == o) {
-               alert("O is the win")
+               alert("o is the win")
             } else {
-                alert("O is the win")
+                alert("o is the win")
             }
         } else {
             if (v1 == x && v2 == x && v3 == x) {
-                alert("X is the win")
+                alert("x is the win")
             } else if (v4 == x && v5 == x && v6 == x) {
-               alert("X is the win")
+               alert("x is the win")
             } else {
-                alert("X is the win")
+                alert("x is the win")
             }
         }
     }, [handleboxclick])
