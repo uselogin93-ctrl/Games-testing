@@ -47,12 +47,12 @@ const Body = () => {
                 alert("O is the win")
             }
         } else {
-            if (v1 == y && v2 == y && v3 == y) {
-                alert("Y is the win")
-            } else if (v4 == y && v5 == y && v6 == y) {
-               alert("Y is the win")
+            if (v1 == x && v2 == x && v3 == x) {
+                alert("X is the win")
+            } else if (v4 == x && v5 == x && v6 == x) {
+               alert("X is the win")
             } else {
-                alert("Y is the win")
+                alert("X is the win")
             }
         }
     }, [handleboxclick])
