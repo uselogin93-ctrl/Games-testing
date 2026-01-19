@@ -17,13 +17,15 @@ const Body = () => {
     const box9 = useRef();
 
     const handleboxclick = (e) => {
+        if (e.getAttribute("value") !== "n") return;
+
         if (boxvalue === "x") {
             e.src = o
-            e.value = "o"
+            e.setAttribute("value", "o")
             setboxvalue("o")
         } else {
             e.src = x
-            e.value = "x"
+            e.setAttribute("value", "x")
             setboxvalue("x")
         }
     }
