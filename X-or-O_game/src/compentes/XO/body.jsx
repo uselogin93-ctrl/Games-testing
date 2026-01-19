@@ -28,34 +28,36 @@ const Body = () => {
         }
     }
 
-    useEffect(async () => {
-        let v1 = await box1.current.value
-        let v2 = await box2.current.value
-        let v3 = await box3.current.value
-        let v4 = await box4.current.value
-        let v5 = await box5.current.value
-        let v6 = await box6.current.value
-        let v7 = await box7.current.value
-        let v8 = await box8.current.value
-        let v9 = await box9.current.value
-        if (v1 == "o" && v2 == "o" && v3 == "o" && v4 == "o" && v5 == "o" && v6 == "o" && v7 == "o" && v8 == "o" && v9 == "o") {
-            if (v1 == "o" && v2 == "o" && v3 == "o") {
-                alert("o is the win")
-            } else if (v4 == "o" && v5 == "o" && v6 == "o") {
-               alert("o is the win")
-            } else {
-                alert("o is the win")
-            }
-        } else {
-            if (v1 == "x" && v2 == "x" && v3 == "x") {
-                alert("x is the win")
-            } else if (v4 == "x" && v5 == "x" && v6 == "x") {
-               alert("x is the win")
-            } else {
-                alert("x is the win")
-            }
+    useEffect(() => {
+        const v1 = box1.current.getAttribute("value")
+        const v2 = box2.current.getAttribute("value")
+        const v3 = box3.current.getAttribute("value")
+        const v4 = box4.current.getAttribute("value")
+        const v5 = box5.current.getAttribute("value")
+        const v6 = box6.current.getAttribute("value")
+        const v7 = box7.current.getAttribute("value")
+        const v8 = box8.current.getAttribute("value")
+        const v9 = box9.current.getAttribute("value")
+
+        const checkWin = (v) => {
+            return (
+                (v1 === v && v2 === v && v3 === v) || // Row 1
+                (v4 === v && v5 === v && v6 === v) || // Row 2
+                (v7 === v && v8 === v && v9 === v) || // Row 3
+                (v1 === v && v4 === v && v7 === v) || // Col 1
+                (v2 === v && v5 === v && v8 === v) || // Col 2
+                (v3 === v && v6 === v && v9 === v) || // Col 3
+                (v1 === v && v5 === v && v9 === v) || // Diag 1
+                (v3 === v && v5 === v && v7 === v)    // Diag 2
+            )
         }
-    }, [handleboxclick])
+
+        if (checkWin("x")) {
+            setTimeout(() => alert("X is the winner!"), 100)
+        } else if (checkWin("o")) {
+            setTimeout(() => alert("O is the winner!"), 100)
+        }
+    }, [boxvalue])
 
     return (
         <div className='w-[99%] h-[99%] flex justify-center items-center bg-transparent p-2.5'>
