@@ -62,36 +62,56 @@ const Body = () => {
     }, [boxvalue])
 
     return (
-        <div className='w-[99%] h-[99%] flex justify-center items-center bg-transparent p-2.5'>
-            <div className='w-[80%] h-[70%] grid grid-cols-3 grid-rows-3 justify-center items-center bg-indigo-200 ring-2 ring-indigo-700 rounded-lg shadow-2xs shadow-indigo-700'>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box1} className='w-full h-full' onClick={() => { handleboxclick(box1.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box2} className='w-full h-full' onClick={() => { handleboxclick(box2.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box3} className='w-full h-full' onClick={() => { handleboxclick(box3.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box4} className='w-full h-full' onClick={() => { handleboxclick(box4.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box5} className='w-full h-full' onClick={() => { handleboxclick(box5.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box6} className='w-full h-full' onClick={() => { handleboxclick(box6.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box7} className='w-full h-full' onClick={() => { handleboxclick(box7.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box8} className='w-full h-full' onClick={() => { handleboxclick(box8.current) }} />
-                </div>
-                <div className='w-[99%] h-[99%] flex justify-center items-center bg-indigo-100 ring-2 ring-indigo-700 rounded-lg shadow-xs shadow-indigo-700'>
-                    <img src="/bg.png" value="n" ref={box9} className='w-full h-full' onClick={() => { handleboxclick(box9.current) }} />
+        <div className='w-full py-12 flex flex-col items-center justify-center gap-10 bg-slate-950 font-orbitron'>
+            <div className="flex flex-col items-center gap-2">
+                <h2 className="text-3xl font-bold text-white tracking-widest uppercase">
+                    Game <span className="text-cyan-400">Arena</span>
+                </h2>
+                <div className="flex items-center gap-4 text-sm">
+                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'x' ? 'bg-cyan-500/20 border-cyan-500 text-cyan-400' : 'border-slate-800 text-slate-500'}`}>
+                        PLAYER X TURN
+                    </div>
+                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'o' ? 'bg-purple-500/20 border-purple-500 text-purple-400' : 'border-slate-800 text-slate-500'}`}>
+                        PLAYER O TURN
+                    </div>
                 </div>
             </div>
+
+            <div className='relative p-1 rounded-2xl bg-linear-to-br from-cyan-500/20 to-purple-500/20'>
+                <div className='grid grid-cols-3 gap-3 p-4 bg-slate-900/80 backdrop-blur-xl rounded-xl border border-slate-700 shadow-2xl'>
+                    {[box1, box2, box3, box4, box5, box6, box7, box8, box9].map((ref, i) => (
+                        <div key={i} className='w-24 h-24 md:w-32 md:h-32 flex justify-center items-center bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg cursor-pointer transition-all hover:scale-[1.02] active:scale-95 group'>
+                            <img
+                                src="/bg.png"
+                                value="n"
+                                ref={ref}
+                                className='w-[70%] h-[70%] object-contain opacity-0 group-hover:opacity-10 transition-opacity'
+                                onClick={(e) => {
+                                    e.target.classList.remove('opacity-0', 'group-hover:opacity-10');
+                                    e.target.classList.add('opacity-100');
+                                    handleboxclick(ref.current);
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Decorative corners */}
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-cyan-500 rounded-tl-sm"></div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-cyan-500 rounded-tr-sm"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-purple-500 rounded-bl-sm"></div>
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-purple-500 rounded-br-sm"></div>
+            </div>
+
+            <button
+                onClick={() => window.location.reload()}
+                className="group flex items-center gap-2 px-6 py-2 border border-slate-700 hover:border-cyan-500/50 text-slate-400 hover:text-cyan-400 rounded-lg transition-all"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                RESET MATCH
+            </button>
         </div>
     )
 }
