@@ -17,10 +17,10 @@ const Mainbody = () => {
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.5)]">
-              <Link to="/xo">PLAY NOW</Link>
+              <NavLink to="/xo">PLAY NOW</NavLink>
             </button>
             <button className="px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-white font-bold rounded-lg transition-all glass">
-              <Link to="/game">EXPLORE GAMES</Link>
+              <NavLink to="/game">EXPLORE GAMES</NavLink>
             </button>
           </div>
         </div>
