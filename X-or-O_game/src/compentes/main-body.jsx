@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Mainbody = () => {
   return (
-    <div className="w-full min-h-[85vh] flex flex-col items-center bg-slate-950 overflow-hidden pt-10">
+    <div className="w-[98%] min-h-[85vh] flex flex-col items-center bg-slate-950 overflow-hidden pt-10">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 blur-[120px] rounded-full -z-10"></div>
 
@@ -16,10 +17,10 @@ const Mainbody = () => {
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(6,182,212,0.5)]">
-              PLAY NOW
+              <Link to="/xo">PLAY NOW</Link>
             </button>
             <button className="px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-white font-bold rounded-lg transition-all glass">
-              EXPLORE GAMES
+              <Link to="/game">EXPLORE GAMES</Link>
             </button>
           </div>
         </div>
@@ -44,7 +45,7 @@ const Mainbody = () => {
       </section>
 
       {/* Stats Section */}
-      <div className="w-full bg-slate-900/50 border-y border-slate-800 py-12">
+      <div className="w-[98%] bg-slate-900/50 border-y border-slate-800 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
           {[
             { label: "Active Players", value: "12.5k+" },

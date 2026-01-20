@@ -8,7 +8,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full min-h-[85vh] bg-slate-950 flex flex-col items-center py-20 px-6 font-orbitron">
+    <div className="w-[98%] min-h-[85vh] bg-slate-950 flex flex-col items-center py-20 px-6 font-orbitron">
       <div className="max-w-4xl w-full space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-5xl font-bold text-white tracking-widest">ABOUT <span className="text-cyan-400">PLAYSPHERE</span></h2>

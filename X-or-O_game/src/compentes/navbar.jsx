@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className='sticky top-0 z-50 w-full glass border-b border-slate-800 px-6 py-4 flex items-center justify-between font-orbitron'>
+    <nav className='sticky top-0 z-50 w-[98%] glass border-b border-slate-800 px-6 py-4 flex items-center justify-between font-orbitron'>
       <div className="flex items-center gap-2 group cursor-pointer">
         <div className="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform shadow-[0_0_15px_rgba(6,182,212,0.5)]">
           <span className="text-slate-950 font-bold text-xl">P</span>

@@ -9,13 +9,13 @@ const Game = () => {
   ];
 
   return (
-    <div className='w-full min-h-[85vh] bg-slate-950 p-8 pt-16 flex flex-col items-center gap-12 font-orbitron'>
+    <div className='w-[98%] min-h-[85vh] bg-slate-950 p-8 pt-16 flex flex-col items-center gap-12 font-orbitron'>
       <div className="text-center space-y-2">
         <h2 className="text-4xl font-bold text-white tracking-widest">ARCADE <span className="text-cyan-400">VAULT</span></h2>
         <p className="text-slate-500 text-sm tracking-[0.3em]">SELECT YOUR CHALLENGE</p>
       </div>
 
-      <div className='w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='w-[98%] max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
         {games.map((game) => (
           <div key={game.id} className='group relative glass border border-slate-800 rounded-2xl p-6 transition-all hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] overflow-hidden'>
             {/* Hover Background Glow */}
