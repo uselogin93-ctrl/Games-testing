@@ -68,10 +68,10 @@ const Body = () => {
                     Game <span className="text-cyan-400">Arena</span>
                 </h2>
                 <div className="flex items-center gap-4 text-sm">
-                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'x' ? 'bg-cyan-500/20 border-cyan-500 text-cyan-400' : 'border-slate-800 text-slate-500'}`} onClick={() => setboxvalue('o')}>
+                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'x' ? 'bg-cyan-500/20 border-cyan-500 text-cyan-400' : 'border-slate-800 text-slate-500'}`}>
                         PLAYER X TURN
                     </div>
-                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'o' ? 'bg-purple-500/20 border-purple-500 text-purple-400' : 'border-slate-800 text-slate-500'}`} onClick={() => setboxvalue('x')}>
+                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'o' ? 'bg-purple-500/20 border-purple-500 text-purple-400' : 'border-slate-800 text-slate-500'}`}>
                         PLAYER O TURN
                     </div>
                 </div>
