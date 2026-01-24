@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-slate-900 border-t border-slate-800 py-12 px-6 font-orbitron">
+    <footer className="w-[98%] bg-slate-900 border-t border-slate-800 py-12 px-6 font-orbitron">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
         <div className="space-y-4">
           <h4 className="text-xl font-bold bg-linear-to-r from-white to-slate-400 bg-clip-text text-transparent">
