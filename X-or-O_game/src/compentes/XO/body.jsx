@@ -68,15 +68,14 @@ const Body = () => {
                     Game <span className="text-cyan-400">Arena</span>
                 </h2>
                 <div className="flex items-center gap-4 text-sm">
-                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'x' ? 'bg-cyan-500/20 border-cyan-500 text-cyan-400' : 'border-slate-800 text-slate-500'}`}>
+                    <button className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'x' ? 'bg-cyan-500/20 border-cyan-500 text-cyan-400' : 'border-slate-800 text-slate-500'}`} onClick={() => setboxvalue('o')}>
                         PLAYER X TURN
-                    </div>
-                    <div className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'o' ? 'bg-purple-500/20 border-purple-500 text-purple-400' : 'border-slate-800 text-slate-500'}`}>
+                    </button>
+                    <button className={`px-4 py-1 rounded-full border transition-all ${boxvalue === 'o' ? 'bg-purple-500/20 border-purple-500 text-purple-400' : 'border-slate-800 text-slate-500'}`} onClick={() => setboxvalue('x')}>
                         PLAYER O TURN
-                    </div>
+                    </button>
                 </div>
             </div>
-
             <div className='relative p-1 rounded-2xl bg-linear-to-br from-cyan-500/20 to-purple-500/20'>
                 <div className='grid grid-cols-3 gap-3 p-4 bg-slate-900/80 backdrop-blur-xl rounded-xl border border-slate-700 shadow-2xl'>
                     {[box1, box2, box3, box4, box5, box6, box7, box8, box9].map((ref, i) => (
@@ -116,4 +115,4 @@ const Body = () => {
     )
 }
 
-export default Body
+export default Bbutton

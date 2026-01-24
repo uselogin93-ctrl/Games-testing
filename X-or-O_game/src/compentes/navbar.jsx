@@ -21,7 +21,7 @@ const Navbar = () => {
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                 className={({ isActive }) => `
                   relative text-sm font-bold tracking-widest transition-all hover:text-cyan-400
-                  ${isActive ? 'text-cyan-400' : 'text-slate-400'}
+                  ${isActive ? 'bg-cyan-400' : 'text-white'}
                   after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-cyan-400 after:transition-all hover:after:w-full
                 `}
               >
