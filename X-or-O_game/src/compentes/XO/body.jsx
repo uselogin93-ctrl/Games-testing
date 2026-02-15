@@ -115,4 +115,4 @@ const Body = () => {
     )
 }
 
-export default Bbutton
+export default Body
